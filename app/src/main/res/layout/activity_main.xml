@@ -5,36 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#121212"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Título da Tarefa:"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/editTextTarefa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Digite o título da tarefa"
-        android:inputType="text" />
-
-    <Button
-        android:id="@+id/btnSalvar"  android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:text="Salvar Tarefa" />
+        android:text="Ciclo de Vida da Activity"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
 
     <TextView
-        android:id="@+id/textViewTarefaSalva"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:text="Nenhuma tarefa salva."
-        android:textSize="16sp" />
+        android:text="Observe o Logcat e o texto abaixo para ver as mudanças de estado."
+        android:textColor="#B3FFFFFF"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="32dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#2E2E2E"
+        android:padding="12dp"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/status_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"
+            android:fontFamily="monospace"/>
+    </ScrollView>
 
 </LinearLayout>
